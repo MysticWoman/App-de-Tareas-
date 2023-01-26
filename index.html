@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>To Do List</title>
+  </head>
+  <body>
+    <header>
+      <div class="container-title">
+        <div>
+          <p class="title">To Do List</p>
+        </div>
+        <div id="bdark">
+          <!-- <button onclick="mode()" class="dark-mode">X</button> -->
+          <img src="./imagenes/darth-vader1.png" alt="dark-mode" class="dark"/>
+            <br><br><br><br>
+          <img
+            src="./imagenes/stormtrooper2.png"
+            alt="light-mode"
+            class="light"
+          />
+        </div>
+      </div>
+    </header>
+    <button id="open-modal">Create</button>
+    <div class="contain-modal">
+      <form class="form">
+        <button type="button" id="close-modal">
+          <i class="fa-sharp fa-solid fa-circle-xmark"></i>
+        </button>
+        <div>
+          <input id="title" type="text" placeholder="Enter the name of task" />
+          <span id="titleErrors"></span>
+        </div>
+        <div>
+          <select id="state">
+            <option value="" disabled selected>Select a state</option>
+            <option value="Pendient">Pendient</option>
+            <option value="In progress">In Progress</option>
+            <option value="Finished">Finished</option>
+          </select>
+          <span id="stateErrors"></span>
+        </div>
+        <button type="submit" class="submit">Create</button>
+      </form>
+      <span id="formErrors"></span>
+    </div>
+
+    <script src="./darkmode.js"></script>
+    <script src="./app.js"></script>
+  </body>
+</html>
